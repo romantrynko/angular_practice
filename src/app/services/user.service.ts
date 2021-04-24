@@ -19,5 +19,4 @@ export class UserService {
   getUsers(): Observable<UserModel[]> {
     return this.httpClient.get<UserModel[]>('https://jsonplaceholder.typicode.com/users');
   }
-
 }

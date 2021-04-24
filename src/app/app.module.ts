@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { AllUsersComponent } from './components/all-users/all-users.component';
 import { HomeComponent } from './components/home/home.component';
+import { UserService } from './services/user.service';
+import { UserInfoComponent } from './components/user-info/user-info.component';
 
 
 @NgModule({
@@ -14,14 +16,15 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     UserComponent,
     AllUsersComponent,
-    HomeComponent
+    HomeComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
