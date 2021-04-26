@@ -1,7 +1,9 @@
 <div class='container'>
   <div class='user-name'>
     <h2 class="text">{{user.id}}. {{user.name}}</h2>
-    <button class="btn btn-primary">Details</button>
+    <!-- <button class="btn btn-primary" [routerLink]='["details", user.id]'>Details</button> -->
+    <!-- <button class="btn btn-primary" [routerLink]='["details", user.id]' [state]='{user: user}'>Details</button> -->
+    <button (click)=goToUser(user.id)></button>
   </div>
   <div class='user-info'>
     <div class="text">Email: {{user.email}}</div>
