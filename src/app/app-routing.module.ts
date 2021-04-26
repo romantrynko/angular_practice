@@ -6,6 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { UserResolveService } from './services/user-resolve.service';
+import { AllPostsComponent } from './components/all-posts/all-posts.component';
+import { PostsResolveService } from './services/posts-resolve.service';
 
 const routes: Routes = [
   {
@@ -30,6 +32,11 @@ const routes: Routes = [
   {
     path: 'users/:id',
     component: UserInfoComponent
+  },
+  {
+    path: 'posts',
+    component: AllPostsComponent,
+    resolve: { postsResolve: PostsResolveService }
   },
   {
     path: 'comments',

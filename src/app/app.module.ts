@@ -10,15 +10,19 @@ import { HomeComponent } from './components/home/home.component';
 import { UserService } from './services/user.service';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { AllPostsComponent } from './components/all-posts/all-posts.component';
+import { PostComponent } from './components/post/post.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    AllUsersComponent,
     HomeComponent,
+    AllUsersComponent,
+    UserComponent,
     UserInfoComponent,
+    AllPostsComponent,
+    PostComponent,
     CommentsComponent
   ],
   imports: [

@@ -9,8 +9,7 @@ import { UserService } from './user.service';
 })
 export class UserResolveService implements Resolve<UserModel[]> {
 
-  constructor(private userService: UserService) {
-  }
+  constructor(private userService: UserService) { }
 
   resolve(): Observable<UserModel[]> {
     return this.userService.getUsers()

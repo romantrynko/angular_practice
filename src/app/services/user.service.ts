@@ -9,7 +9,7 @@ import { UserModel } from '../models/user.model';
 
 export class UserService {
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   ngOnInit(): void {
@@ -17,10 +17,10 @@ export class UserService {
   }
 
   getUsers(): Observable<UserModel[]> {
-    return this.httpClient.get<UserModel[]>('https://jsonplaceholder.typicode.com/users');
+    return this.http.get<UserModel[]>('https://jsonplaceholder.typicode.com/users');
   }
 
   getUserById(id: string): Observable<UserModel> {
-    return this.httpClient.get<UserModel>(`https://jsonplaceholder.typicode.com/users/${id}`);
+    return this.http.get<UserModel>(`https://jsonplaceholder.typicode.com/users/${id}`);
   }
 }

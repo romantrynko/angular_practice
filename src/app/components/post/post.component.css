@@ -1,0 +1,36 @@
+.container {
+  display         : flex;
+  flex-direction  : row;
+  width           : fit-content;
+  border          : 0px solid #000000;
+  padding         : 10px;
+  margin          : 20px;
+  box-shadow      : 0px 0px 27px 0px rgba(0, 0, 0, 0.4);
+  background-color: rgb(5, 38, 80);
+  text-align      : center;
+}
+
+.post-name {
+  background-color: rgb(248, 251, 255);
+  width           : fit-content;
+  color           : rgb(19, 8, 80);
+  font-family     : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin          : 20px;
+  padding         : 30px;
+  box-shadow      : 0px 0px 27px 0px rgba(255, 255, 255, 0.3);
+}
+
+.post-info {
+  background-color: rgb(248, 251, 255);
+  width           : fit-content;
+  color           : rgb(19, 8, 80);
+  font-family     : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin          : 20px;
+  padding         : 30px;
+  box-shadow      : 0px 0px 27px 0px rgba(255, 255, 255, 0.3);
+}
+
+
+.text {
+  font-weight: 200;
+}

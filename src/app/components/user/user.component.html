@@ -1,14 +1,14 @@
 <div class='container'>
-      <div class='user-name'>
-        <h2 class="text">{{user.id}}. {{user.name}}</h2>
-        <button class="btn btn-primary" [routerLink]='user.id'>Details</button>
-      </div>
-      <div class='user-info'>
-        <div class="text">Email: {{user.email}}</div>
-        <div class="text">Address: {{user.address.street}}</div>
-        <div class="text">Company name: {{user.company.name}}</div>
-      </div>
-      <div class='card-body'>
-        <button class="btn btn-primary" routerLink=''>Home</button>
-      </div>
+  <div class='user-name'>
+    <h2 class="text">{{user.id}}. {{user.name}}</h2>
+    <button class="btn btn-primary">Details</button>
   </div>
+  <div class='user-info'>
+    <div class="text">Email: {{user.email}}</div>
+    <div class="text">Address: {{user.address.street}}</div>
+    <div class="text">Company name: {{user.company.name}}</div>
+  </div>
+  <div class='card-body'>
+    <button class="btn btn-primary" routerLink=''>Home</button>
+  </div>
+</div>
