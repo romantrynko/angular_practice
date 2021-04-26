@@ -9,7 +9,9 @@ import { PostsService } from './posts.service';
 })
 export class PostsResolveService implements Resolve<PostModel[]> {
 
-constructor(private postService: PostsService) { }
+  constructor(private postService: PostsService) {
+
+  }
 
   resolve(): Observable<PostModel[]> {
     return this.postService.getPosts()

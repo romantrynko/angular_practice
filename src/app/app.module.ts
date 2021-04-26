@@ -12,6 +12,8 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { AllPostsComponent } from './components/all-posts/all-posts.component';
 import { PostComponent } from './components/post/post.component';
+import { UserDetailsTwoComponent } from './components/user-details-two/user-details-two.component';
+import { UserDetailsThreeComponent } from './components/user-details-three/user-details-three.component';
 
 
 @NgModule({
@@ -23,10 +25,12 @@ import { PostComponent } from './components/post/post.component';
     UserInfoComponent,
     AllPostsComponent,
     PostComponent,
-    CommentsComponent
+    CommentsComponent,
+    UserDetailsTwoComponent,
+    UserDetailsThreeComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],

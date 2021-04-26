@@ -2,6 +2,7 @@ import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserModel } from 'src/app/models/user.model';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-user-info',
@@ -10,20 +11,16 @@ import { UserModel } from 'src/app/models/user.model';
 })
 export class UserInfoComponent implements OnInit {
 
-  id: number
+  @Input() user: UserModel
 
-
-  constructor(private activatedRouter: ActivatedRoute) {
-    this.activatedRouter.params.subscribe(value => {
-      console.log(value, 'params');
-      this.id = value.id
+  constructor(
+    private activatedRouter: ActivatedRoute,
+    private userService: UserService
+  ) {
+    this.activatedRouter.params.subscribe(params => {
+      this.userService.getUserById(params.id).subscribe(value => this.user = value)
     })
-
-    this.activatedRouter.queryParams.subscribe(value => {
-      console.log(value, 'queryParams');
-    })
-   }
-
+  }
 
   ngOnInit() {
   }

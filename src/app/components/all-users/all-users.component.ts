@@ -12,11 +12,7 @@ export class AllUsersComponent implements OnInit {
 
   users: UserModel[] = [];
 
-  constructor(
-    // private userService: UserService,
-    private activatedRouter: ActivatedRoute
-  ) {
-    // this.userService.getUsers().subscribe(users => this.users = users)
+  constructor(private activatedRouter: ActivatedRoute) {
     this.activatedRouter.data.subscribe(value => this.users = value.userResolve)
   }
 
