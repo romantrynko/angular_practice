@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { UserResolveService } from './services/user-resolve.service';
 
 const routes: Routes = [
   {
@@ -20,8 +22,19 @@ const routes: Routes = [
   //     }
   //   ]
   // }
-  { path: 'users', component: AllUsersComponent },
-  { path: 'users/:id', component: UserInfoComponent }
+  {
+    path: 'users',
+    component: AllUsersComponent,
+    resolve: { userResolve: UserResolveService }
+  },
+  {
+    path: 'users/:id',
+    component: UserInfoComponent
+  },
+  {
+    path: 'comments',
+    component: CommentsComponent
+  }
 ];
 
 @NgModule({

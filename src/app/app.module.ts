@@ -9,6 +9,7 @@ import { AllUsersComponent } from './components/all-users/all-users.component';
 import { HomeComponent } from './components/home/home.component';
 import { UserService } from './services/user.service';
 import { UserInfoComponent } from './components/user-info/user-info.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
     UserComponent,
     AllUsersComponent,
     HomeComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
